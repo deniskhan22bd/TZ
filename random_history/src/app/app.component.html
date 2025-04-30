@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  
+  <div class="form-group">
+    <label for="character">Выберите персонажа:</label>
+    <select id="character" [(ngModel)]="selectedCharacter">
+      <option *ngFor="let character of characters" [value]="character">
+        {{ character }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="action">Выберите действие:</label>
+    <select id="action" [(ngModel)]="selectedAction">
+      <option *ngFor="let action of actions" [value]="action">
+        {{ action }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="place">Выберите место:</label>
+    <select id="place" [(ngModel)]="selectedPlace">
+      <option *ngFor="let place of places" [value]="place">
+        {{ place }}
+      </option>
+    </select>
+  </div>
+
+  <div class="buttons-group">
+    <button (click)="generateStory()" 
+            [disabled]="!selectedCharacter || !selectedAction || !selectedPlace">
+      Сгенерировать историю
+    </button>
+
+    <button *ngIf="generatedStory" 
+            (click)="regenerateStory()"
+            [disabled]="!selectedCharacter || !selectedAction || !selectedPlace">
+      Сгенерировать новую историю
+    </button>
+  </div>
+
+  <div *ngIf="generatedStory" class="story">
+    <h2>Ваша история:</h2>
+    <p>{{ generatedStory }}</p>
+  </div>
+</div>
