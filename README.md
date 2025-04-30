@@ -1,15 +1,22 @@
-Random - history - TZ-3
-RUN:
+# Random - history
+
+## RUN:
+```bash
 npm install
 ng serve
 localhost:4200
+```
 
+## Social app:
 
-Social app:
-Social front RUN:
-docker built -t social_front .
+### Social front RUN:
+```bash
+docker build -t social_front .
 docker run -p 4200:4200 social_front
+```
 
-Social back RUN:
-docker built -t social_back .
+### Social back RUN:
+```bash
+docker build -t social_back .
 docker run -p 8000:8000 social_back
+```
