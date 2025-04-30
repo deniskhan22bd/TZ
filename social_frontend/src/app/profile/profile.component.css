@@ -1,0 +1,35 @@
+.profile-container {
+  padding: 1rem;
+}
+
+.profile-content {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: #ffffff;
+  max-width: 600px;
+}
+
+.profile-header h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.value {
+  color: #555555;
+}

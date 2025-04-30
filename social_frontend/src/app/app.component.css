@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+  }
+  .nav-content {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-content li {
+    display: inline;
+  }
+  .nav-content a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333333;
+  }
+  .nav-content a.active {
+    border-bottom: 2px solid #007bff;
+  }
+  .logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #d9534f;
+    padding: 0;
+  }
+  .logout-btn:hover {
+    text-decoration: underline;
+  }
+  

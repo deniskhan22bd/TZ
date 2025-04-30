@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+        <h2>Логин</h2>
+        <div class="form-field">
+            <label>Email:</label>
+            <input name="email" formControlName="email">
+        </div>
+        <div class="form-field">
+            <label>Пароль:</label>
+            <input name="password" formControlName="password" type="password">
+        </div>
+    <button class="button button-primary" (click)="login()">Войти</button>
+</form>

@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <ul class="nav-content">
+    <li><a routerLink="/home" routerLinkActive="active">Главная</a></li>
+    <li><a routerLink="/post" routerLinkActive="active">Создать пост</a></li>
+    <li *ngIf="userId"><a [routerLink]="['/profile', userId]" routerLinkActive="active">Профиль</a></li>
+    <li *ngIf="!userId"><a routerLink="/login" routerLinkActive="active">Войти</a></li>
+    <li *ngIf="!userId"><a routerLink="/register" routerLinkActive="active">Регистрация</a></li>
+    <li *ngIf="userId"><button (click)="logout()" class="logout-btn">Выйти</button></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
