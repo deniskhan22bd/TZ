@@ -4,7 +4,6 @@
 ```bash
 npm install
 ng serve
-localhost:4200
 ```
 
 ## Social app:
