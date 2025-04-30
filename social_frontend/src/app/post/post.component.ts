@@ -33,9 +33,8 @@ export class PostComponent {
 
     this.apiService.getPosts().subscribe(
       (response: any) => {
-        this.posts = response;
-        this.posts.filter((post: Post) => post.user.id == parseInt(localStorage.getItem('userId')!))
-        this.posts.reverse()
+        this.posts = response.filter((post: Post) => post.user.id == parseInt(localStorage.getItem('userId')!));
+        this.posts.reverse();
         console.log(this.posts);
       },
       (error) => {
